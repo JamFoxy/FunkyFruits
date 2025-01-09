@@ -5,7 +5,7 @@
       "src": "__init__.py",
       "use": "@vercel/python",
       "config": {
-        "runtime": "python3.9"
+        "runtime": "python3.12.3"
       }
     }
   ]
