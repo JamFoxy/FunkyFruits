@@ -1,8 +1,6 @@
 from flask import Flask
-from app import create_app  # импортируем функцию создания приложения
+from flask_mail import Mail
+from app.config import Config
+from app.routes import main
 
-# создаем экземпляр приложения
-app = create_app()
-
-if __name__ == "__main__":
-    app.run(debug=True)  # запускаем приложение в режиме отладки
+app = Flask(__name__)
