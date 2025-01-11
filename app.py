@@ -1,3 +1,4 @@
+from flask import Flask
 from app import create_app  # импортируем функцию создания приложения
 
 # создаем экземпляр приложения
