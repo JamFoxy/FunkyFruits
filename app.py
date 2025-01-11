@@ -1,4 +1,7 @@
-import os
-from app import create_app
+from app import create_app  # импортируем функцию создания приложения
 
-application = create_app()
+# создаем экземпляр приложения
+app = create_app()
+
+if __name__ == "__main__":
+    app.run(debug=True)  # запускаем приложение в режиме отладки
