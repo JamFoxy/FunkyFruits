@@ -88,7 +88,7 @@ body {
 }
 
 .floating-wrapper {
-  position: absolute; /* Фиксация по отношению к родителю (.main-header) */
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -96,23 +96,37 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  background: none; /* Оставляем фон прозрачным */
-  pointer-events: none; /* Для пропуска событий на фоне */
-  z-index: 2; /* Чтобы находилось под текстом .main-header */
+  background: none;
+  pointer-events: none;
+  z-index: 2;
 }
 
 .floating-image {
-  width: 1300px; /* Размер изображения */
+  width: 80vw;
+  max-width: 1300px;
   animation: rise-up 1.5s ease-out forwards;
   transform-origin: bottom center;
 }
 
 @keyframes rise-up {
   from {
-    transform: translateY(10%); /* Изображение начинается снизу */
+    transform: translateY(calc(100% + 10px));
   }
   to {
-    transform: translateY(0); /* Изображение поднимается на место */
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .floating-image {
+    width: 90vw;
+    animation-duration: 2s;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .floating-image {
+    width: 70vw;
   }
 }
 
